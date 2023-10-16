@@ -33,7 +33,7 @@ public class ChangeWindow {
             Stage newStage = new Stage();
             Parent newStageRoot = loader.getRoot();
             newStage.setScene(new Scene(newStageRoot));
-            newStage.setTitle("Secret Chat №1");
+            newStage.setTitle("Education Platform");
             newStage.setResizable(false);
             // Send back to server
             newStage.setOnCloseRequest(new EventHandler<WindowEvent>() {

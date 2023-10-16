@@ -31,7 +31,10 @@ public class ChatController implements Initializable {
     private Button exitButton;
 
     @FXML
-    private Button sendMessageButton;
+    private Button sendFlagButton;
+
+    @FXML
+    private Button sendTopButton;
 
     @FXML
     private TextField messageField;
@@ -151,8 +154,8 @@ public class ChatController implements Initializable {
             Client.closeEverything();
         });
 
-        // The event listener for the send button
-        sendMessageButton.setOnAction(event -> {
+        // The event listener for the send flag button
+        sendFlagButton.setOnAction(event -> {
             String outMessage = messageField.getText();
             messageField.clear();
 
@@ -163,6 +166,11 @@ public class ChatController implements Initializable {
                 displayYourMessage(message, vBoxWithMessages);
                 Client.sendMessage(outMessage);
             }
+        });
+
+        // The event listener for the send top button
+        sendTopButton.setOnAction(event -> {
+            Client.sendMessage("");
         });
     }
 }

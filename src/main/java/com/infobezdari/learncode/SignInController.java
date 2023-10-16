@@ -26,7 +26,7 @@ public class SignInController {
     private TextField loginField;
 
     @FXML
-    private TextField IPAddressField;
+    private TextField groupField;
 
     @FXML
     private PasswordField passwordField;
@@ -66,7 +66,7 @@ public class SignInController {
             try {
                 Client.setUsername(Validators.loginValidator(loginField));
                 Client.setPassword(Validators.passwordValidator(passwordField));
-                Client.setIPAddress(Validators.ipValidator(IPAddressField));
+                Client.setGroupID(Validators.ipValidator(groupField));
             } catch (InvalidDataException e) {
                 ExceptionBox.createExceptionBox(sideBackground, e.getMessage());
                 return;
@@ -80,7 +80,8 @@ public class SignInController {
                 Client.sendMessage(
                         "sign_in" +
                         "|" + Client.getUsername() +
-                        "|" + Client.getPassword()
+                        "|" + Client.getPassword()+
+                        "|" + Client.getGroupID()
                 );
 
                 String answer = Client.waitMessage();

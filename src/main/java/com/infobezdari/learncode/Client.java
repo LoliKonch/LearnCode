@@ -18,6 +18,7 @@ public class Client {
     private static String password;
     private static String email;
     private static String IPAddress;
+    private static String groupID;
     private static String confirmationCode;
     private static String newPassword;
 
@@ -160,6 +161,14 @@ public class Client {
 
     public static void setNewPassword(String newPassword) {
         Client.newPassword = newPassword;
+    }
+
+    public static String getGroupID() {
+        return groupID;
+    }
+
+    public static void setGroupID(String groupID) {
+        Client.groupID = groupID;
     }
 
     public static void closeEverything() {

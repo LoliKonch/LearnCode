@@ -40,12 +40,12 @@
                        promptText="Password"
         />
 
-        <TextField fx:id="IPAddressField"
+        <TextField fx:id="groupField"
                    layoutX="150.0"
                    layoutY="214.0"
                    prefHeight="32.0"
                    prefWidth="200.0"
-                   promptText="0.0.0.0"
+                   promptText="Group ID"
         />
 
         <Button fx:id="signInButton"

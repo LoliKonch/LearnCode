@@ -21,7 +21,7 @@ public class Application extends javafx.application.Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("Sign_in.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Secret Chat №1");
+        stage.setTitle("Education Platform");
         stage.setResizable(false);
         stage.setScene(scene);
         String stylesheet = getClass().getResource("Registration_dark_trovo.css").toExternalForm();

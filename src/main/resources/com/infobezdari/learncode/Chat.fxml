@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -19,7 +19,7 @@
                  prefWidth="360.0"
       />
 
-      <Button fx:id="sendMessageButton"
+      <Button fx:id="sendFlagButton"
               layoutX="420.0"
               layoutY="350.0"
               mnemonicParsing="false"
@@ -29,7 +29,8 @@
               styleClass="send-button"
       />
 
-      <Button layoutX="490.0"
+      <Button fx:id="sendTopButton"
+              layoutX="490.0"
               layoutY="350.0"
               mnemonicParsing="false"
               prefHeight="30.0"
@@ -52,4 +53,14 @@
                   styleClass="vBoxWithMessages"
             />
       </ScrollPane>
+
+    <Button fx:id="exitButton"
+            mnemonicParsing="false"
+            layoutX="5.0"
+            layoutY="5.0"
+            text="Exit"
+            prefHeight="23.0"
+            prefWidth="40.0"
+            styleClass="menu-button"
+    />
 </AnchorPane>
