@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import customexceptions.InvalidDataException;
 import javafx.fxml.FXML;

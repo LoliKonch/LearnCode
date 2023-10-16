@@ -15,7 +15,7 @@
             prefWidth="600.0"
             xmlns="http://javafx.com/javafx/18.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="chat.local.javalocalchat.EmailConfirmationController"
+            fx:controller="com.infobezdari.learncode.EmailConfirmationController"
             styleClass="anchor-pane"
 >
 

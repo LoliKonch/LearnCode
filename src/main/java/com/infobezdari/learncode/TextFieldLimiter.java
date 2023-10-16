@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;

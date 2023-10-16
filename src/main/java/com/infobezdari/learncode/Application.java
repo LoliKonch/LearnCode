@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -6,7 +6,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-import static chat.local.javalocalchat.ChangeWindow.styleName;
 
 /**
  * Launch application class
@@ -25,7 +24,7 @@ public class Application extends javafx.application.Application {
         stage.setTitle("Secret Chat №1");
         stage.setResizable(false);
         stage.setScene(scene);
-        String stylesheet = getClass().getResource("Registration_" + styleName + ".css").toExternalForm();
+        String stylesheet = getClass().getResource("Registration_dark_trovo.css").toExternalForm();
         scene.getStylesheets().add(stylesheet);
         stage.show();
     }

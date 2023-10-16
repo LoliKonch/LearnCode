@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import com.didisoft.pgp.*;
 import com.didisoft.pgp.exceptions.NoPrivateKeyFoundException;

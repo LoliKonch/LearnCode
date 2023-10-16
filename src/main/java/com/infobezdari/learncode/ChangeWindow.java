@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +16,6 @@ import java.io.IOException;
  * @version 1.0
  */
 public class ChangeWindow {
-
-    // Field will be removed soon
-    public static String styleName = "dark_DS";
 
     /**
      * Window remove and create procedure
@@ -49,10 +46,10 @@ public class ChangeWindow {
             });
             // Applying styles to a scene
             Scene scene = newStage.getScene();
-            String stylesheet = getClass().getResource("Registration_" + styleName + ".css").toExternalForm();
+            String stylesheet = getClass().getResource("Registration_dark_trovo.css").toExternalForm();
 
             if (windowName.equals("Chat.fxml")) {
-                stylesheet = getClass().getResource("Chat_" + styleName + ".css").toExternalForm();
+                stylesheet = getClass().getResource("Chat_dark_trovo.css").toExternalForm();
             }
 
             scene.getStylesheets().add(stylesheet);

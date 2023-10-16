@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import customexceptions.InvalidDataException;
 import javafx.fxml.FXML;
@@ -58,9 +58,9 @@ public class SignUpController {
 
             // Validating login password and E-mail
             try {
-                Client.setEmail(Validators.loginValidator(loginField));
+                Client.setUsername(Validators.loginValidator(loginField));
                 Client.setPassword(Validators.passwordValidator(passwordField));
-                Client.setPassword(Validators.emailValidator(mailField));
+                Client.setEmail(Validators.emailValidator(mailField));
             } catch (InvalidDataException e) {
                 ExceptionBox.createExceptionBox(sideBackground, e.getMessage());
                 return;

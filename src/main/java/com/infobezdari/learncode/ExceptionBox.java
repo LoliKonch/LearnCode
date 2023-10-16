@@ -1,4 +1,4 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
 import javafx.animation.TranslateTransition;
 import javafx.scene.control.Label;

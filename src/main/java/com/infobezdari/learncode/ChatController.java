@@ -1,6 +1,6 @@
-package chat.local.javalocalchat;
+package com.infobezdari.learncode;
 
-import javafx.animation.TranslateTransition;
+
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -10,11 +10,9 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
-import javafx.util.Duration;
 
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -43,39 +41,6 @@ public class ChatController implements Initializable {
 
     @FXML
     private VBox vBoxWithMessages;
-
-    @FXML
-    private VBox vBoxMenu;
-
-    @FXML
-    private Pane menuTrigger;
-
-    @FXML
-    private RadioButton radioButton1;
-
-    @FXML
-    private RadioButton radioButton2;
-
-    @FXML
-    private RadioButton radioButton3;
-
-    @FXML
-    private RadioButton radioButton4;
-
-    @FXML
-    private RadioButton radioButton5;
-
-    @FXML
-    private RadioButton radioButton6;
-
-    @FXML
-    private RadioButton radioButton7;
-
-    @FXML
-    private RadioButton radioButton8;
-
-    @FXML
-    private Button applyThemeButton;
 
 
     /**
@@ -179,58 +144,10 @@ public class ChatController implements Initializable {
             }
         });
 
-        // Settings menu animation
-        vBoxMenu.setTranslateX(-160);
-        TranslateTransition menuTranslation = new TranslateTransition(Duration.millis(500), vBoxMenu);
-
-        menuTranslation.setFromX(-160);
-        menuTranslation.setToX(0);
-
-        menuTrigger.setOnMouseEntered(evt -> {
-            menuTranslation.setRate(1);
-            menuTranslation.play();
-        });
-
-        vBoxMenu.setOnMouseExited(evt -> {
-            menuTranslation.setRate(-1);
-            menuTranslation.play();
-        });
-
-        // Grouping radio buttons
-        ToggleGroup rbGroupPalettes = new ToggleGroup();
-        radioButton1.setToggleGroup(rbGroupPalettes);
-        radioButton2.setToggleGroup(rbGroupPalettes);
-        radioButton3.setToggleGroup(rbGroupPalettes);
-        radioButton4.setToggleGroup(rbGroupPalettes);
-        radioButton5.setToggleGroup(rbGroupPalettes);
-        radioButton6.setToggleGroup(rbGroupPalettes);
-        radioButton7.setToggleGroup(rbGroupPalettes);
-        radioButton8.setToggleGroup(rbGroupPalettes);
-
-        // The event listener for the change theme button
-        applyThemeButton.setOnAction(event -> {
-
-            RadioButton selection = (RadioButton) rbGroupPalettes.getSelectedToggle();
-            if (selection != null) {
-                switch (selection.getId()) {
-                    case "radioButton1" -> chat.local.javalocalchat.ChangeWindow.styleName = "dark_DS";
-                    case "radioButton2" -> chat.local.javalocalchat.ChangeWindow.styleName = "light_VK";
-                    case "radioButton3" -> chat.local.javalocalchat.ChangeWindow.styleName = "dark_VK";
-                    case "radioButton4" -> chat.local.javalocalchat.ChangeWindow.styleName = "light_TG";
-                    case "radioButton5" -> chat.local.javalocalchat.ChangeWindow.styleName = "dark_TG";
-                    case "radioButton6" -> chat.local.javalocalchat.ChangeWindow.styleName = "dark_trovo";
-                    case "radioButton7" -> chat.local.javalocalchat.ChangeWindow.styleName = "boosty";
-                    case "radioButton8" -> chat.local.javalocalchat.ChangeWindow.styleName = "darwin_TV";
-                }
-
-                ChangeWindow.changeWindowTo(menuTrigger, "Sign_in.fxml");
-                Client.closeEverything();
-            }
-        });
 
         // The event listener for the exit button open a Sign_in window
         exitButton.setOnAction(event -> {
-            ChangeWindow.changeWindowTo(menuTrigger, "Sign_in.fxml");
+            ChangeWindow.changeWindowTo(vBoxWithMessages, "Sign_in.fxml");
             Client.closeEverything();
         });
 

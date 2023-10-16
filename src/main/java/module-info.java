@@ -11,6 +11,6 @@ module chat.local.javalocalchat {
     requires pgplib;
     requires annotations;
 
-    opens chat.local.javalocalchat to javafx.fxml;
-    exports chat.local.javalocalchat;
+    opens com.infobezdari.learncode to javafx.fxml;
+    exports com.infobezdari.learncode;
 }

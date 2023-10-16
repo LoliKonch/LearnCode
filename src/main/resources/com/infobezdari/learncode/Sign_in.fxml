@@ -13,7 +13,7 @@
             styleClass="anchor-pane"
             xmlns="http://javafx.com/javafx/11.0.14-internal"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="chat.local.javalocalchat.SignInController"
+            fx:controller="com.infobezdari.learncode.SignInController"
 >
 
     <Pane fx:id="sideBackground"
