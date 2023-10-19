@@ -50,6 +50,8 @@ public class SignInController {
         TextFieldLimiter.addTextLimiter(passwordField, 40);
         // Adding a limiter (40) to the login field
         TextFieldLimiter.addTextLimiter(loginField, 40);
+        // Adding a limiter (20) to the groupID field
+        TextFieldLimiter.addTextLimiter(groupField, 20);
 
         // The event listener for the registration button opens a Sign_up window
         registrationButton.setOnAction(event ->
@@ -62,11 +64,11 @@ public class SignInController {
         // The event listener for the enter button can open a Chat window
         signInButton.setOnAction(event ->{
 
-            // Validating login password and IP
+            // Validating login password and group ID
             try {
                 Client.setUsername(Validators.loginValidator(loginField));
                 Client.setPassword(Validators.passwordValidator(passwordField));
-                Client.setGroupID(Validators.ipValidator(groupField));
+                Client.setGroupID(Validators.groupIDValidator(groupField));
             } catch (InvalidDataException e) {
                 ExceptionBox.createExceptionBox(sideBackground, e.getMessage());
                 return;

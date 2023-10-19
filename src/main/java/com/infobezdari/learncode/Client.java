@@ -17,7 +17,7 @@ public class Client {
     private static String username;
     private static String password;
     private static String email;
-    private static String IPAddress;
+    private static String IPAddress = "127.0.0.1";
     private static String groupID;
     private static String confirmationCode;
     private static String newPassword;

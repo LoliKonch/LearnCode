@@ -104,4 +104,16 @@ public class Validators {
             throw new InvalidDataException("All fields must be filled in");
         }
     }
+
+    public static String groupIDValidator(TextField groupIDField) throws InvalidDataException {
+        if (groupIDField.getText() != null && !groupIDField.getText().trim().isEmpty()){
+            if (LOGIN_PATTERN.matcher(groupIDField.getText()).matches()) {
+                return groupIDField.getText().trim();
+            } else {
+                throw new InvalidDataException("Invalid Group ID");
+            }
+        } else {
+            throw new InvalidDataException("All fields must be filled in");
+        }
+    }
 }
